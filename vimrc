@@ -1,0 +1,126 @@
+""" 레퍼런스
+" http://vim-ko.github.io/doc/quickref.html
+" http://wujek2.ia.pw.edu.pl/wujek/wa/prog/vim/options.html
+" http://vimdoc.sourceforge.net/
+
+
+
+""" vim
+set nocompatible  " nocp; 오리지널 Vi 와의 호환성을 없애고, Vim 만의 기능들을 쓸 수 있게 함.
+set history=999   " hi; 명령어 히스토리 수
+set noswapfile " noswf; swap 파일을 만들지 않음
+set nobackup " nobk; 백업파일을 만들지 않음. 백업파일은 편집하는 파일 앞에 ~로 시작하는 파일 
+" set backupdir=~/tmp " 백업 파일을 만들 경우, 백업 파일의 경로를 지정. 미리 tmp 폴더를 만들어 두어야 함.
+set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.DS_Store,*.db " wig; 자동 완성시키지 않을 파일들 패턴
+set wildignorecase " wic; 파일명 자동 완성 시 대소문자를 무시
+set lazyredraw " lz; 매크로 실행중에 화면을 다시 그리지 않음 "
+set showcmd "sc; 상태 표시줄에 (입력중인) 명령을 표시. 근데 무슨 차이인지 모르겠음.
+set laststatus=2 " ls; 상태 표시줄을 항상 보이도록
+set wildmenu " wmnu; 명령줄 자동 완성 시 메뉴를 사용
+"set termencoding=utf-8 " tenc; 터미널의 문자 인코딩
+"set lines=100 "화면에 표시되는 줄 수
+"set magic " magic 기능 사용
+
+" 파일의 종류를 자동으로 인식
+filet plugin indent on
+" ffs; 자동으로 인식할 'fileformat' 값
+set ffs=unix,mac,dos
+
+
+""" key mapping
+" xmllint
+map <F2> <Esc>:1,$!xmllint --format -<CR>
+" leader 키 설정(기본키는 \)
+let mapleader=','
+" scroll
+map <C-j> <C-e> " 위로 스크롤
+map <C-k> <C-y> " 아래로 스크롤
+" 영역이 지정된 상태에서 Tab 과 Shift-Tab 으로 들여쓰기/내어쓰기를 할 수 있도록 함.
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+" 커서가 위치한 단어를 다음 영어사전에서 찾아줌
+map <F8> :!open /Applications/Google\ Chrome.app http://dic.daum.net/search.do?q=<cword><CR>
+"set keywordprg=<my command> " K를 눌렀을 때 실행할 명령어. 기본저윽로는 manpage
+
+
+
+" 왼쪽의 글자를 오른쪽의 글자로 자동으로 변경
+" abbr은 ab로 줄일 수 있음
+abbr fucntion function
+abbr fales false
+abbr retrun return
+
+
+
+""" ime
+"set noimd "no imdisable 이라는 의미로 한글입력기 등을 사용하게 하는 설정이라고 하는데, 이거 설정하면 한글 입력시 개판됨
+set iminsert=1 " imi; 편집(insert)모드를 빠져나갈 때 (즉 ESC를 눌렀을 때) IME(한글입력기)를 off상태로 만든다.
+set imsearch=-1 " ims; 찾기 패턴을 입력할 때 :lmap 이나 IM을 사용. 근데 뭔 말인지 모르겠다.
+
+
+
+""" encoding
+set encoding=utf-8 "  enc; 'encoding' 옵션은 Vim에게 당신이 사용할 문자의 인코딩을 알려줍니다.  이 인코딩은 버퍼의 내용(당신이 편집중인 파일), 레지스터, Vim 스크립트 파일 등에 적용됩니다.  'encoding'을 Vim 내부의 옵션으로 생각하면 됩니다.
+set fileencoding=utf-8
+set fileencodings=utf-8,cp949,ucs-bom "파일을 읽어 들일때 앞에 것부터 차례로 시도 합니다. 3개 이상 써도 될겁니다. 여기서 결정된 인코딩으로 fenc 옵션이 설정됩니다. 다 실패 했다면 enc 값을 따릅니다. 이 값은 환경 변수에서 얻어옵니다.
+" 관련글: https://kldp.org/node/32987
+
+
+
+""" theme
+set background=dark " bg; 배경색을 어두운 걸로
+colorscheme molokai
+" color molokai " 뭔가 살짝 다름
+
+
+
+""" font
+set guifont=Monaco:h15 " gfn
+
+
+
+""" gui
+set lines=999 columns=999 " 윈도우가 항상 최대 크기로 나오도록.
+if has("gui_macvim")
+	set guifont=Monaco:h15
+	set transparency=5 "불투명도
+	set antialias " anti; 맥 OS X에서 부드럽고 에일리어싱 제거된 글꼴을 사용
+endif
+" gVim 을 사용중일 경우 클립보드를 unnamed 레지스터로 매핑
+if has("gui_running") || has("xterm_clipboard")
+    set cb=unnamed
+endif
+
+
+
+""" editor
+syntax on " 자동 문법 강조
+set numberwidth=2 " nuw; 줄 번호 표시에 사용할 최소한의 열의 수.
+set number " nu; 줄번호
+set showmatch " sm; 괄호 입력 시 짝이 되는 괄호로 잠시 갔다가 돌아옴.
+set visualbell " vb; 오류음 대신 비주얼벨 사용. 무슨 차이인지 모르겠음"
+set ruler " ru; 상태표시줄 오른쪽에 커서의 위치를 보여줌.
+set backspace=2 " bs; indent,eol,start. Backspace 키 동작 방식
+set hlsearch " hls; 검색어 하이라이팅
+set linespace=1 " lsp; 줄간격 "
+set ignorecase " ic; 찾기할 때 대소문자 구분하지 않음
+set tabstop=4 " ts; 탭 간격"
+set shiftwidth=4 " sw; 자동 들여쓰기 간격 "
+set softtabstop=4 " sts; 편집 시 <Tab>을 누르면 들어가는 공백의 수
+set autoindent " 새로운 줄의 들여쓰기를 이전 줄에서 가져옴
+set cindent " C 언어 스타일 자동 들여쓰기
+set smartindent "cindent 와 비슷 하지만 #if, #ifdef, #define 등과 #으로 시작하는 전처리기 명령어에 대해서는 자동 들여쓰기를 무시하고 다음 라인의 첫번째 열로 이동한다.
+set scrolloff=5 "so; 커서 위나 밑에 표시할 최소 줄 수. 정확히 뭔지 모르겠음.
+set paste " 외부 텍스트를 붙여넣기 할 때 자동 들여쓰기 막기
+"set textwidth=120 " tw; 한 줄에 입력할 수 있는 글자 수. 띄어쓰기가 없으면 초과되도 계속 한 줄로 입력됨.
+set wrap "긴 줄을 다음 줄로 넘겨가며 모두 표시
+set cursorline " cul; 현재 커서가 있는 줄을 강조
+"set cursorcolumn " cuc; 현재 커서가 있는 열을 강조
+set list lcs=tab:\┆\ ,trail:~ " Tab 부분을 ┆ (공백)으로 표시하고 줄끝 공백을 ~로 표시
+set expandtab " et; <Tab>이 입력되면 스페이스 공백들을 삽입
+
+
+
+""" 찾기
+set nowrapscan " 찾기에서 파일의 맨 끝에 이르면 계속하여 찾지 않음
+set incsearch " 찾기 패턴을 입력하는 중에도 일치하는 곳을 강조
