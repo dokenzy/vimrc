@@ -32,6 +32,8 @@ Plugin 'othree/javascript-libraries-syntax.vim' " Syntax file for JavaScript lib
 Plugin 'Lokaltog/vim-easymotion' " EasyMotion provides a much simpler way to use some motions in vim.
 Plugin 'klen/python-mode' " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box.
 Plugin 'vim-scripts/Pydiction' " Tab-complete your Python
+Plugin 'kana/vim-textobj-user' " Create your own text objects
+Plugin 'glts/vim-textobj-indblock' " Vim text objects for blocks of indentation whitespace
 
 call vundle#end()            " required
 filetype plugin indent on    " required

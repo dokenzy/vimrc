@@ -27,3 +27,5 @@
  * Lokaltog/vim-easymotion: EasyMotion provides a much simpler way to use some motions in vim.
  * klen/python-mode: Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box.
  * vim-scripts/Pydiction: Tab-complete your Python
+ * Plugin 'kana/vim-textobj-user' " Create your own text objects
+ * Plugin 'glts/vim-textobj-indblock' " Vim text objects for blocks of indentation whitespace
