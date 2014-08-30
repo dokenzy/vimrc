@@ -34,6 +34,7 @@ Plugin 'klen/python-mode' " Vim python-mode. PyLint, Rope, Pydoc, breakpoints fr
 Plugin 'vim-scripts/Pydiction' " Tab-complete your Python
 Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'glts/vim-textobj-indblock' " Vim text objects for blocks of indentation whitespace
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -248,3 +249,7 @@ let g:pymode_lint_message = 1
 let g:pydiction_location = '~/.vim/bundle/Pydiction/complete-dict'
 let g:pydiction_menu_height = 10
 
+" tagbar
+" required: Install ctags from brew.
+" Default ctags on Mac OS X(Mavericks) doesn't work.
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
