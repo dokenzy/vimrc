@@ -82,6 +82,8 @@ vmap <S-Tab> <gv
 map <F8> :!open /Applications/Google\ Chrome.app http://dic.daum.net/search.do?q=<cword><CR>
 "set keywordprg=<my command> " K를 눌렀을 때 실행할 명령어. 기본저윽로는 manpage
 
+" 더블 탭으로 분할된 창끼리 쉽게 이동
+nmap <TAB><TAB> <C-w><C-w>
 
 
 " 왼쪽의 글자를 오른쪽의 글자로 자동으로 변경

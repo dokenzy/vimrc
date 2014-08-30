@@ -40,7 +40,10 @@ vmap <Tab> >gv
 vmap <S-Tab> <gv
 " 커서가 위치한 단어를 다음 영어사전에서 찾아줌
 map <F8> :!open /Applications/Google\ Chrome.app http://dic.daum.net/search.do?q=<cword><CR>
-"set keywordprg=<my command> " K를 눌렀을 때 실행할 명령어. 기본저윽로는 manpage
+"set keywordprg=<my command> " K를 눌렀을 때 실행할 명령어. 기본적으로는 manpage
+
+" 더블 탭으로 분할된 창끼리 쉽게 이동
+nmap <TAB><TAB> <C-w><C-w>
 
 
 
