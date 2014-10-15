@@ -35,6 +35,7 @@ Plugin 'vim-scripts/Pydiction' " Tab-complete your Python
 Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'glts/vim-textobj-indblock' " Vim text objects for blocks of indentation whitespace
 Plugin 'majutsushi/tagbar'
+Plugin 'gorkunov/smartpairs.vim' " Fantastic selection for VIM
 
 call vundle#end()            " required
 filetype plugin indent on    " required
