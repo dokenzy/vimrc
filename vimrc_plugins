@@ -36,6 +36,7 @@ Plugin 'kana/vim-textobj-user' " Create your own text objects
 Plugin 'glts/vim-textobj-indblock' " Vim text objects for blocks of indentation whitespace
 Plugin 'majutsushi/tagbar'
 Plugin 'gorkunov/smartpairs.vim' " Fantastic selection for VIM
+Plugin 'haya14busa/incsearch.vim' " Improved incremental searching for Vim
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -256,3 +257,8 @@ let g:pydiction_menu_height = 10
 " required: Install ctags from brew.
 " Default ctags on Mac OS X(Mavericks) doesn't work.
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)

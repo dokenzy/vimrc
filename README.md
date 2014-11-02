@@ -36,3 +36,5 @@
  * kana/vim-textobj-user: Create your own text objects
  * glts/vim-textobj-indblock: Vim text objects for blocks of indentation whitespace
  * majutsushi/tagbar: displays tags in a window, ordered by scope. require ctags.
+ * gorkunov/smartpairs.vim: Fantastic selection for VIM
+ * haya14busa/incsearch.vim: Improved incremental searching for Vim
