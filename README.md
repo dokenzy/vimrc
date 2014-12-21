@@ -38,3 +38,5 @@
  * majutsushi/tagbar: displays tags in a window, ordered by scope. require ctags.
  * gorkunov/smartpairs.vim: Fantastic selection for VIM
  * haya14busa/incsearch.vim: Improved incremental searching for Vim
+ * mustache/vim-mustache-handlebars: spacebars, mustache and handlebars mode for vim
+ * kshenoy/vim-signature: Plugin to toggle, display and navigate marks
