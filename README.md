@@ -40,3 +40,4 @@
  * haya14busa/incsearch.vim: Improved incremental searching for Vim
  * mustache/vim-mustache-handlebars: spacebars, mustache and handlebars mode for vim
  * kshenoy/vim-signature: Plugin to toggle, display and navigate marks
+ * jeetsukumaran/vim-indentwise: A Vim plugin for indent-level based motion.

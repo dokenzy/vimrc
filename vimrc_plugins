@@ -41,6 +41,7 @@ Plugin 'mustache/vim-mustache-handlebars' "spacebars, mustache and handlebars mo
 Plugin 'kshenoy/vim-signature' "Plugin to toggle, display and navigate marks
 "Plugin 'marijnh/tern_for_vim' "Tern-based JavaScript editing support. required Tern and NPM.
 "Plugin 'jlemetay/permut' "A vim plugin to swap columns of text separated by arbitrary characters.
+Plugin 'jeetsukumaran/vim-indentwise' "Vim plugin for indent-level based motion
 
 
 call vundle#end()            " required
