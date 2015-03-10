@@ -41,3 +41,5 @@
  * mustache/vim-mustache-handlebars: spacebars, mustache and handlebars mode for vim
  * kshenoy/vim-signature: Plugin to toggle, display and navigate marks
  * jeetsukumaran/vim-indentwise: A Vim plugin for indent-level based motion.
+ * chrisbra/vim-diff-enhanced: Better Diff options for Vim
+ 
