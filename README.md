@@ -1,16 +1,22 @@
 # vimrc
 
 ## 공통 기능
-* molokai 테마 사용(https://github.com/tomasr/molokai에서 다운로드해야 한다)
- * https://github.com/dokenzy/macvim 으로 빌드하면 molokai 테마가 기본으로 내장되어 있다.
-* 더블 탭(<TAB><TAB>)으로 분할된 창끼리 쉽게 이동할 수 있다.
-* 특정 단어에 커서를 두고 <F8>키를 누르면 '다음영어사전'에서 단어를 찾아준다.
+ * 더블 탭(<TAB><TAB>)으로 분할된 창끼리 쉽게 이동할 수 있다.
+ * 특정 단어에 커서를 두고 <F8>키를 누르면 '다음영어사전'에서 단어를 찾아준다.
+
+## vimrc_basic
+ * colorscheme: murphy
+ * set lines=999 columns=999 옵션을 지우지 않으면 우분투 터미널에서 화면이 엉망이 됨
 
 ## vimrc_noplugins
-* macvim용 vimrc 파일. 플러그인을 깔지 않아도 꽤 편리함.
-* 내가 fork한 macvim(https://github.com/dokenzy/macvim)에는 molokai 테마가 기본 설치되어 있다.
+ * colorscheme: molokai
+  * https://github.com/tomasr/molokai
+  * https://github.com/dokenzy/macvim 으로 빌드하면 molokai 테마가 기본으로 내장되어 있다.
+ * macvim용 vimrc 파일. 플러그인을 깔지 않아도 꽤 편리함.
+ * 내가 fork한 macvim(https://github.com/dokenzy/macvim)에는 molokai 테마가 기본 설치되어 있다.
 
 ## vimrc_pluings
+ * colorscheme: molokai
  * 내가 사용하는 플러그인에 대한 설정이 추가된 vimrc
  * 플러그인은 Vundle로 쉽게 설치할 수 있다.
 
