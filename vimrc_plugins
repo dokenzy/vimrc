@@ -29,6 +29,7 @@ Plugin 'tpope/vim-surround' " quoting/parenthesizing made simple
 Plugin 'scrooloose/syntastic' " Syntax checking hacks for vim
 Plugin 'gcmt/wildfire.vim' " Smart selection of the closest text object
 Plugin 'othree/javascript-libraries-syntax.vim' " Syntax file for JavaScript libraries
+Plugin 'jelera/vim-javascript-syntax' "https://github.com/jelera/vim-javascript-syntax
 Plugin 'Lokaltog/vim-easymotion' " EasyMotion provides a much simpler way to use some motions in vim.
 Plugin 'klen/python-mode' " Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box.
 Plugin 'vim-scripts/Pydiction' " Tab-complete your Python
@@ -48,7 +49,6 @@ Plugin 'chrisbra/vim-diff-enhanced' "Better Diff options for Vim
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-
 
 
 """ vim
@@ -144,6 +144,7 @@ if has("gui_macvim")
 	set transparency=5 "불투명도
 	set antialias " anti; 맥 OS X에서 부드럽고 에일리어싱 제거된 글꼴을 사용
 endif
+
 " gVim 을 사용중일 경우 클립보드를 unnamed 레지스터로 매핑
 if has("gui_running") || has("xterm_clipboard")
     set cb=unnamed
