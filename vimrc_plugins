@@ -44,6 +44,7 @@ Plugin 'kshenoy/vim-signature' "Plugin to toggle, display and navigate marks
 "Plugin 'jlemetay/permut' "A vim plugin to swap columns of text separated by arbitrary characters.
 Plugin 'jeetsukumaran/vim-indentwise' "Vim plugin for indent-level based motion
 Plugin 'chrisbra/vim-diff-enhanced' "Better Diff options for Vim
+Plugin 'zefei/vim-colortuner' "Adjust your vim colors using sliders
 
 
 call vundle#end()            " required

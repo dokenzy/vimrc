@@ -50,4 +50,5 @@
  * jeetsukumaran/vim-indentwise: A Vim plugin for indent-level based motion.
  * chrisbra/vim-diff-enhanced: Better Diff options for Vim
  * jelera/vim-javascript-syntax: Enhanced javascript syntax file for Vim
+ * zefei/vim-colortuner: Adjust your vim colors using sliders
  
