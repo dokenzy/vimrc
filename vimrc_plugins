@@ -45,6 +45,7 @@ Plugin 'kshenoy/vim-signature' "Plugin to toggle, display and navigate marks
 Plugin 'jeetsukumaran/vim-indentwise' "Vim plugin for indent-level based motion
 Plugin 'chrisbra/vim-diff-enhanced' "Better Diff options for Vim
 Plugin 'zefei/vim-colortuner' "Adjust your vim colors using sliders
+"Plugin 'mxw/vim-jsx' "React JSX syntax highlighting and indenting for vim
 
 
 call vundle#end()            " required
