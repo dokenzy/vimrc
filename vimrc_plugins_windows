@@ -3,8 +3,6 @@
 " http://wujek2.ia.pw.edu.pl/wujek/wa/prog/vim/options.html
 " http://vimdoc.sourceforge.net/
 
-
-
 " vundle
 set nocompatible " nocp; 오리지널 Vi 와의 호환성을 없애고, Vim 만의 기능들을 쓸 수 있게 함. vundle 쓰려면 필수
 filetype off " required
@@ -52,6 +50,7 @@ Plugin 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes 
 Plugin 'airblade/vim-gitgutter' "shows a git diff in the gutter (sign column) and stages/reverts hunks.
 Plugin 'Yggdroot/indentLine' "display the indention levels with thin vertical lines
 Plugin 'Keithbsmiley/swift.vim' "Vim runtime files for Swift
+Plugin 'ryanoasis/vim-devicons' "https://github.com/ryanoasis/vim-devicons
 
 
 call vundle#end()            " required
@@ -141,8 +140,9 @@ colorscheme molokai
 
 
 """ font
-set guifont=Monaco:h11 " gfn
-set antialias " anti; 맥 OS X에서 부드럽고 에일리어싱 제거된 글꼴을 사용
+"set guifont=Monaco:h11 " gfn
+set guifont=BitstreamVeraSansMono\ NF:h12 " gfn
+set antialias " anti;
 
 
 """ gui
@@ -297,6 +297,34 @@ let g:jsx_ext_required = 0
 " pangloss/vim-javascript
 let g:javascript_enable_domhtmlcss = 1
 
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+" Additional vim-devicons settings.
+autocmd FileType nerdtree setlocal nolist
+let g:airline_powerline_fonts = 1
 
 " incsearch
 "map /  <Plug>(incsearch-forward)

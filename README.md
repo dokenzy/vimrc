@@ -25,6 +25,7 @@
  * Windows용 설정 추가
  * 참고 URL: https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
  * Vundle로 플러그인을 설치하기 위해서는 curl을 설치해야 함. 쉽게 cmder를 사용하는 것이 좋음
+ * patched 폰트 설치: *https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/BitstreamVeraSansMono
 
 ### 플러그인 리스트
  * gmarik/Vundle.vim: let Vundle manage Vundle, required
