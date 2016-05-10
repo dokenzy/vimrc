@@ -21,6 +21,11 @@
  * 내가 사용하는 플러그인에 대한 설정이 추가된 vimrc
  * 플러그인은 Vundle로 쉽게 설치할 수 있다.
 
+### vimrc_plugins__windows
+ * Windows용 설정 추가
+ * 참고 URL: https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
+ * Vundle로 플러그인을 설치하기 위해서는 curl을 설치해야 함. 쉽게 cmder를 사용하는 것이 좋음
+
 ### 플러그인 리스트
  * gmarik/Vundle.vim: let Vundle manage Vundle, required
  * jiangmiao/auto-pairs: insert or delete brackets, parens, quotes in pair
