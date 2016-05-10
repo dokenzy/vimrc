@@ -26,6 +26,10 @@
  * 참고 URL: https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
  * Vundle로 플러그인을 설치하기 위해서는 curl을 설치해야 함. 쉽게 cmder를 사용하는 것이 좋음
  * patched 폰트 설치: *https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/BitstreamVeraSansMono
+ * 윈도우 최대화 이슈
+	 * set lines=999 columns=999로 설정해도 윈도우가 최대화면에서 시작하지 않음
+	 * 다음 dll 파일을 $HOME/vimfiles/plugin에 추가하면 해결됨
+		 ***** http://www.vim.org/scripts/script.php?script_id=1302
 
 ### 플러그인 리스트
  * gmarik/Vundle.vim: let Vundle manage Vundle, required
