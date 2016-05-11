@@ -330,3 +330,8 @@ let g:airline_powerline_fonts = 1
 "map ?  <Plug>(incsearch-backward)
 "map g/ <Plug>(incsearch-stay)
 "syntax : 구문론, 통사론, 신택스, 문장론, 체계
+
+
+" Hide ToolBar
+set guioptions-=T
+set guioptions-=m
