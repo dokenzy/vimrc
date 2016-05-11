@@ -52,6 +52,7 @@ Plugin 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes 
 Plugin 'airblade/vim-gitgutter' "shows a git diff in the gutter (sign column) and stages/reverts hunks.
 Plugin 'Yggdroot/indentLine' "display the indention levels with thin vertical lines
 Plugin 'Keithbsmiley/swift.vim' "Vim runtime files for Swift
+Plugin 'ryanoasis/vim-devicons' "https://github.com/ryanoasis/vim-devicons#installation
 
 
 call vundle#end()            " required
@@ -141,7 +142,8 @@ colorscheme molokai
 
 
 """ font
-set guifont=Monaco:h13 " gfn
+"set guifont=Monaco:h13 " gfn
+"set guifont=BitstreamVeraSansMono\ Nerd:h12
 
 
 """ gui
@@ -155,7 +157,8 @@ if has("win32")
 endif
 
 if has("gui_macvim")
-	set guifont=Monaco:h13
+	"set guifont=Monaco:h13
+	set guifont=Bitstream\ Vera\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono:h13
 	set transparency=5 "불투명도
 	set antialias " anti; 맥 OS X에서 부드럽고 에일리어싱 제거된 글꼴을 사용
 endif
@@ -296,8 +299,55 @@ let g:jsx_ext_required = 0
 " pangloss/vim-javascript
 let g:javascript_enable_domhtmlcss = 1
 
+" vim-devicons for powerline
+let g:airline_powerline_fonts = 1
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
+
+autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
+" if you are using another syn highlight for a given line (e.g.
+" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
+" other highlight to work with it
+autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
+autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+
+
+autocmd FileType nerdtree setlocal nolist
 
 " incsearch
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
+"let g:webdevicons_conceal_nerdtree_brackets = 1
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+let g:WebDevIconsOS = 'Darwin'
