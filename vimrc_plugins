@@ -87,7 +87,7 @@ set ffs=unix,mac,dos
 
 """ key mapping
 " xmllint
-map <F0> <Esc>:1,$!xmllint --format -<CR>
+map <F9> <Esc>:1,$!xmllint --format -<CR>
 
 
 " indentation

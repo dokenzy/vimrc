@@ -32,7 +32,7 @@ set ffs=unix,mac,dos
 
 """ key mapping
 " xmllint
-map <F2> <Esc>:1,$!xmllint --format -<CR>
+map <F9> <Esc>:1,$!xmllint --format -<CR>
 " leader 키 설정(기본키는 \)
 let mapleader=','
 " scroll
