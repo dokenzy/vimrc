@@ -53,7 +53,8 @@ Plugin 'airblade/vim-gitgutter' "shows a git diff in the gutter (sign column) an
 Plugin 'Yggdroot/indentLine' "display the indention levels with thin vertical lines
 Plugin 'Keithbsmiley/swift.vim' "Vim runtime files for Swift
 Plugin 'ryanoasis/vim-devicons' "https://github.com/ryanoasis/vim-devicons#installation
-
+Plugin 'crusoexia/vim-javascript-lib' "https://github.com/crusoexia/vim-javascript-lib
+Plugin 'editorconfig/editorconfig-vim' "https://github.com/editorconfig/editorconfig-vim
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -88,8 +89,6 @@ set ffs=unix,mac,dos
 """ key mapping
 " xmllint
 map <F9> <Esc>:1,$!xmllint --format -<CR>
-
-
 " indentation
 map <F2> <Esc>:set ts=2<CR>:set sw=2<CR>
 map <F4> <Esc>:set ts=4<CR>:set sw=4<CR>
@@ -136,7 +135,7 @@ set fileencodings=utf-8,cp949,ucs-bom "파일을 읽어 들일때 앞에 것부�
 
 """ theme
 set background=dark " bg; 배경색을 어두운 걸로
-colorscheme molokai
+colorscheme monokai
 " color molokai " 뭔가 살짝 다름
 
 
@@ -158,7 +157,8 @@ endif
 
 if has("gui_macvim")
 	"set guifont=Monaco:h13
-	set guifont=Bitstream\ Vera\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono:h13
+	"set guifont=Bitstream\ Vera\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono:h13
+	set guifont=Roboto\ Mono\ Light\ Nerd\ Font\ Complete\ Mono:h13
 	set transparency=5 "불투명도
 	set antialias " anti; 맥 OS X에서 부드럽고 에일리어싱 제거된 글꼴을 사용
 endif
@@ -182,9 +182,9 @@ set backspace=2 " bs; indent,eol,start. Backspace 키 동작 방식
 set hlsearch " hls; 검색어 하이라이팅
 set linespace=1 " lsp; 줄간격 "
 set ignorecase " ic; 찾기할 때 대소문자 구분하지 않음
-set tabstop=4 " ts; <TAB> 간격"
-set shiftwidth=4 " sw; 자동 들여쓰기 간격 "
-set softtabstop=4 " sts; 편집 시 <Tab>을 누르면 들어가는 공백의 수
+set tabstop=2 " ts; <TAB> 간격"
+set shiftwidth=2 " sw; 자동 들여쓰기 간격 "
+set softtabstop=2 " sts; 편집 시 <Tab>을 누르면 들어가는 공백의 수
 set autoindent " 새로운 줄의 들여쓰기를 이전 줄에서 가져옴
 set cindent " C 언어 스타일 자동 들여쓰기
 set smartindent "cindent 와 비슷 하지만 #if, #ifdef, #define 등과 #으로 시작하는 전처리기 명령어에 대해서는 자동 들여쓰기를 무시하고 다음 라인의 첫번째 열로 이동한다.
@@ -194,7 +194,7 @@ set paste " 외부 텍스트를 붙여넣기 할 때 자동 들여쓰기 막기
 set wrap "긴 줄을 다음 줄로 넘겨가며 모두 표시
 set cursorline " cul; 현재 커서가 있는 줄을 강조
 "set cursorcolumn " cuc; 현재 커서가 있는 열을 강조
-"set list lcs=tab:\┆\ ,trail:~ " <TAB> 부분을 ┆ (공백)으로 표시하고 줄끝 공백을 ~로 표시. 이 옵션은 vim-indent-guides로 대체.
+set list lcs=tab:\┆\ ,trail:~ " <TAB> 부분을 ┆ (공백)으로 표시하고 줄끝 공백을 ~로 표시. 이 옵션은 vim-indent-guides로 대체.
 set expandtab " et; <Tab>이 입력되면 스페이스 공백들을 삽입
 
 
@@ -243,7 +243,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " syntastic
-let g:syntastic_javascript_checkers = ['jshint', 'jslint', 'eslint', 'jsxhint'] " jshint가 설치되어 있어야 함. npm install jshint
+let g:syntastic_javascript_checkers = ['eslint'] "npm install eslint -g
 let g:syntastic_check_on_open = 1 " 파일 열 때 체크
 let g:syntastic_enable_signs = 1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"] " ng-로 시작하는 속성은 무시
@@ -351,3 +351,7 @@ let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
 "let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
 "let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 let g:WebDevIconsOS = 'Darwin'
+
+if &diff
+	colorscheme monokai
+endif
