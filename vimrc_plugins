@@ -92,8 +92,12 @@ map <F9> <Esc>:1,$!xmllint --format -<CR>
 " indentation
 map <F2> <Esc>:set ts=2<CR>:set sw=2<CR>
 map <F4> <Esc>:set ts=4<CR>:set sw=4<CR>
+
 " leader 키 설정(기본키는 \)
-let mapleader=','
+" <Leader> + w 만 누르면 된다.
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " scroll
 map <C-j> <C-e> " 위로 스크롤
 map <C-k> <C-y> " 아래로 스크롤
