@@ -370,3 +370,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 if &diff
 	colorscheme monokai
 endif
+
+" autoindent가 안되서 스택오버플로우에서 찾아 넣음.
+" http://stackoverflow.com/questions/3938596/vim-autoindent-not-working
+autocmd VimEnter * set autoindent
