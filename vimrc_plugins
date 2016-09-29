@@ -94,7 +94,7 @@ map <F2> <Esc>:set ts=2<CR>:set sw=2<CR>
 map <F4> <Esc>:set ts=4<CR>:set sw=4<CR>
 
 " leader 키 설정(기본키는 \)
-let mapleader=','
+let mapleader="\<Space>"
 
 " <Leader> + w 만 누르면 된다.
 map  <Leader>w <Plug>(easymotion-bd-w)
