@@ -55,6 +55,7 @@ Plugin 'Keithbsmiley/swift.vim' "Vim runtime files for Swift
 Plugin 'ryanoasis/vim-devicons' "https://github.com/ryanoasis/vim-devicons#installation
 Plugin 'crusoexia/vim-javascript-lib' "https://github.com/crusoexia/vim-javascript-lib
 Plugin 'editorconfig/editorconfig-vim' "https://github.com/editorconfig/editorconfig-vim
+Plugin 'lilydjwg/colorizer' " https://github.com/lilydjwg/colorizer
 
 call vundle#end()            " required
 filetype plugin indent on    " required
