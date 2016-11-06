@@ -18,6 +18,7 @@ Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'jiangmiao/auto-pairs' " insert or delete brackets, parens, quotes in pair
 Plugin 'SearchComplete' " Tab completion of words inside of a search ('/')
 Plugin 'bling/vim-airline' " lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline-themes' "https://github.com/vim-airline/vim-airline-themes
 Plugin 'fugitive.vim' " a Git wrapper so awesome, it should be illegal
 Plugin 'nathanaelkane/vim-indent-guides' " A Vim plugin for visually displaying indent levels in code
 Plugin 'neocomplcache' " Ultimate auto-completion system for Vim
