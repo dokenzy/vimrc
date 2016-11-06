@@ -58,6 +58,12 @@ Plugin 'crusoexia/vim-javascript-lib' "https://github.com/crusoexia/vim-javascri
 Plugin 'editorconfig/editorconfig-vim' "https://github.com/editorconfig/editorconfig-vim
 Plugin 'lilydjwg/colorizer' " https://github.com/lilydjwg/colorizer
 
+" Find files containing given regular expression
+" https://github.com/mileszs/ack.vim
+" required ack
+" For search speed, install ag(https://github.com/ggreer/the_silver_searcher)
+Plugin 'mileszs/ack.vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -368,6 +374,18 @@ let g:WebDevIconsOS = 'Darwin'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_exclude_patterns = ['scp://.*']
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+
+" Ack plugin key
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+" Use ack plugin with 'the-silver-searcher'
+" https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
 
 if &diff
 	colorscheme monokai
