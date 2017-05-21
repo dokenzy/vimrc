@@ -57,6 +57,7 @@ Plugin 'ryanoasis/vim-devicons' "https://github.com/ryanoasis/vim-devicons#insta
 Plugin 'crusoexia/vim-javascript-lib' "https://github.com/crusoexia/vim-javascript-lib
 Plugin 'editorconfig/editorconfig-vim' "https://github.com/editorconfig/editorconfig-vim
 Plugin 'lilydjwg/colorizer' " https://github.com/lilydjwg/colorizer
+Plugin 'posva/vim-vue' "https://github.com/posva/vim-vue
 
 " Find files containing given regular expression
 " https://github.com/mileszs/ack.vim
@@ -385,6 +386,10 @@ if executable('ag')
   " let g:ackprg = 'ag --vimgrep'
   let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
+
+" Vue syntax highlighting stops working randomly
+" This is for working around it.
+autocmd FileType vue syntax sync fromstart
 
 
 if &diff
