@@ -145,14 +145,12 @@ set guifont=BitstreamVeraSansMono\ NF:h11 " gfn
 set antialias " anti;
 
 
-""" gui
-set lines=999 columns=999 " 윈도우가 항상 최대 크기로 나오도록.
-
 if has("win32")
     " 인코딩을 UTF-8로 한 경우, 메뉴가 깨지는 문제 방지
     let $LANG = 'ko_KR.UTF-8'
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
+    set lines=999 columns=999 " 윈도우가 항상 최대 크기로 나오도록.
 endif
 
 if has("gui_macvim")
