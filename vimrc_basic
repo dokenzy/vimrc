@@ -23,6 +23,7 @@ set wildmenu " wmnu; 명령줄 자동 완성 시 메뉴를 사용
 "set termencoding=utf-8 " tenc; 터미널의 문자 인코딩
 "set lines=100 "화면에 표시되는 줄 수
 "set magic " magic 기능 사용
+set foldlevel=99
 
 " 파일의 종류를 자동으로 인식
 filet plugin indent on
