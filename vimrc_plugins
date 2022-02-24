@@ -151,8 +151,7 @@ set fileencodings=utf-8,cp949,ucs-bom "파일을 읽어 들일때 앞에 것부�
 
 """ theme
 set background=dark " bg; 배경색을 어두운 걸로
-colorscheme monokai
-" color molokai " 뭔가 살짝 다름
+colorscheme monokai "https://github.com/sickill/vim-monokai
 
 
 
